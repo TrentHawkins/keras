@@ -933,9 +933,9 @@ class Progbar:
             if prog_width % 8 == 5: bar += '▋'
             if prog_width % 8 == 6: bar += '▊'
             if prog_width % 8 == 7: bar += '▉'
-          else:
-            bar += '█'
-        bar += (' ' * (self.width - prog_width // 8))
+        # else:
+        #   bar += '█'
+        bar += (' ' * (self.width - prog_width // 8 - 1))
         bar += '|'
       else:
         bar = '%7d/Unknown' % current
